@@ -14,7 +14,7 @@ function validateEmail() {
     const emailInput = document.getElementById('email');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 if (!emailRegex.test(emailInput.value)) {
-    emailInput.setCustomValidity('Please enter a valid email address.');
+    emailInput.setCustomValidity('Enter a valid email you grackle!');
         return false;
 } else {
     emailInput.setCustomValidity('');
@@ -29,7 +29,7 @@ function validatePhone() {
     const phoneInput = document.getElementById('phone');
     const phoneValue = phoneInput.value;
     if (!/^\d+$/.test(phoneValue)) {
-        phoneInput.setCustomValidity('Phone number can only contain numbers');
+        phoneInput.setCustomValidity('What phone number has letters!?');
         return false;
     } else {
         phoneInput.setCustomValidity('');
