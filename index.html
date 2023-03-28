@@ -13,6 +13,7 @@
             <div class = left-content>
                 <div class = top>
                     <h1>Psyduck is neat!</h1>
+                        <div class = "h1bg"></div>
                 </div>
                 <div class = bottom>
                     <h4>Photo by <a href="https://danbooru.donmai.us/posts/3033381">bluekomadori</a> @ danbooru</h4>
@@ -20,9 +21,11 @@
             </div>
         </div>
         <div class = right>
-            <h2>Are you a fan of Psyduck? We are tallying everyone that is a fan, make the world know that he is the best, so sign up and become one with the DUCKNESS, do it, <i>do it</i>.</h2>
-            <h2>Less Go!</h2>
-                <form action="https://httpbin.org/post" method = "post">
+            <div class = "head">
+                <h2>Are you a fan of Psyduck? We are tallying everyone that is a fan, make the world know that he is the best, so sign up and become one with the DUCKNESS, do it, <i>do it</i>.</h2>
+            </div>
+                <h2>Less Go!</h2>
+                <form action="https://httpbin.org/post" method = "post" onsubmit="return validatePassword() && validatePhone()">
                     <div class = input>
                         <div class = form-group id = "grid">
                             <div class = input-row>
@@ -33,9 +36,9 @@
                             </div>
                             <div class = input-row>
                                 <label for = "email">EMAIL:</label>
-                                <input type="text" name="email" id="email" required oninvalid="this.setCustomValidity('You forgot about this one you dingus!')" oninput="this.setCustomValidity('')">                                        
+                                <input type="text" name="email" id="email" required oninvalid="this.setCustomValidity('Enter a valid email you grackle!')" oninput="this.setCustomValidity('')">                                        
                                 <label for = "phone">PHONE NUMBER:</label>
-                                <input type="text" name="phone" id="phone" required oninvalid="this.setCustomValidity('You forgot about this one you dingus!')" oninput="this.setCustomValidity('')">                       
+                                <input type="text" name="phone" id="phone" required oninvalid="this.setCustomValidity('Numbers only for this one!')" oninput="this.setCustomValidity('')">                       
                             </div>
                             <div class = input-row>  
                                 <label for = "pass1">PASSWORD:</label>
@@ -50,5 +53,6 @@
                     </div>
         </div>
     </div>
+<script src="script.js" defer></script>
 </body>
 </html>
